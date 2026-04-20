@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects - Mickent Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <script src="script.js" defer></script>
+
+<style>
+body { font-family:'Poppins', sans-serif; background:#0F172A; color:white; margin:0; padding:0; }
+
+.projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:50px; }
+
+.card { background:#1E293B; padding:20px; border-radius:10px; text-align:center; transition:0.3s; }
+
+.card:hover { transform:translateY(-10px); }
+
+.card img { width:100%; border-radius:10px; }
+
+.btn { display:inline-block; margin-top:15px; padding:10px 20px; background:#3B82F6; border-radius:25px; text-decoration:none; color:white; }
+header { text-align:center; padding:20px; }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background: #1E293B;
+    color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>All Projects</h1>
+    <a href="index.html" class="btn">Back to Home</a>
+</header>
+
+<div class="projects">
+
+    <div class="card">
+        <img src="images/project1.jpg" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>Personal responsive website showcasing my skills.</p>
+        <button class="btn" onclick="openModal('Portfolio Website','project1.jpg','This is my personal portfolio website showcasing skills, projects, and experience.')">View</button>
+    </div>
+
+    <div class="card">
+        <img src="images/project2.jpg" alt="Graphic Designs">
+        <h3>Graphic Designs</h3>
+        <p>Creative layouts using Photoshop and Canva.</p>
+        <button class="btn" onclick="openModal('Graphic Designs','project2.jpg','Creative graphic design layouts using Photoshop and Canva.')">View</button>
+    </div>
+
+    <div class="card">
+        <img src="images/project3.jpg" alt="Piso WiFi System">
+        <h3>Piso WiFi System</h3>
+        <p>System with geographical locations of Piso WiFi.</p>
+        <button class="btn" onclick="openModal('Piso WiFi System','project3.jpg','A system with geographic locations of Piso WiFi for data tracking.')">View</button>
+    </div>
+
+    <!-- Add more projects here -->
+
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-img" src="" alt="">
+        <p id="modal-desc"></p>
+    </div>
+</div>
+
+</body>
+</html>
